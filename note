@@ -1,0 +1,48 @@
+base.html_
+         |-HEADER_
+         |       |-Logo_
+         |       |     |-Logo image
+         |       |     |-Company name
+         |       |-Nav/Menu(Services, About Us, Sign in)
+         |-MAIN
+         |-FOOTER|
+                 |-Address
+                 |-Contacts
+
+index.html_
+          |-base.html_
+                     |-MAIN_
+                           |-Slides of company's photographs
+                           |-Article
+                           |-Button(Get started)
+
+services.html_
+             |-base.html_
+                        |-MAIN_
+                              |-Hero section
+                              |-Sections cards(5050foods, CaveLux, VitalFitness)
+
+5050-foods.html_
+               |-base.html_
+                          |-MAIN_
+                                |-Hero section 
+                                |-Foods categories and preview cards(breads, pastries, deserts, meals)
+
+cavelux.html_
+            |-base.html_
+                        |-MAIN_
+                            |-Hero section 
+                            |-Gallery
+                            |-Button(Make Reservation)
+
+vitalfitness.html_
+                 |-base.html_
+                            |-MAIN_
+                                  |-Hero section 
+                                  |-Gallery
+                                  |-Button(Register Now)
+about.html_
+          |-base.html_
+                     |-MAIN_
+                           |-About 
+                           |-Button(Get started)
