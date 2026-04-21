@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block title%}Fortunate Hub | Home{% endblock %}
+
+{% block main %}
+
+<!-- Slideshow -->
+  <section id="hero">
+    <div class="swiper heroSwiper">
+      <div class="swiper-wrapper">
+
+        <div class="swiper-slide">
+          <img src="{{ url_for('static', filename='img/slide1.jpg') }}" alt="slide 1">
+        </div>
+
+        <div class="swiper-slide">
+          <img src="{{ url_for('static', filename='img/slide2.jpg') }}" alt="slide 2">
+        </div>
+
+        <div class="swiper-slide">
+          <img src="{{ url_for('static', filename='img/slide3.jpg') }}" alt="slide 3">
+        </div>
+
+      </div>
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+    </div>
+  </section>
+  <!-- End slideshow -->
+
+  <!-- Article -->
+  <section id="about-intro" class="py-5">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-12 text-center" data-aos="fade-up">
+          <h2>Welcome to Fortunate Hub</h2>
+          <p>Fortunate Hub is a group of companies committed to excellence across fitnes, food, and lifestyle. We are home to VitalFitness, 50-50 Foods & Bakery, and CaveLux - each delivering quality and experience in their own unique way.</p>
+          <a href="{{ url_for('about') }}" class="btn-getstarted mt-3">Get Started</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {% endblock %}
