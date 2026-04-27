@@ -4,42 +4,78 @@
 
 {% block main %}
 
+<!-- Standalone Hero Image -->
+<div class="textwrapper">
+    <div class="hero-blur-overlay"></div>
+    <div class="hero-text" data-aos="fade-up" data-aos-duration="1000">
+        <h1>One Destination, Many Choices</h1>
+        <p>Food. Fitness. Lifestyle. All under one roof in Ilorin. </p>
+        <a href="{{ url_for('about') }}" class="btn-getstarted mt-3">Get Started</a>
+    </div>
+</div>
+<!-- End Standalone Hero -->
+
 <!-- Slideshow -->
-  <section id="hero">
+<section id="hero">
     <div class="swiper heroSwiper">
-      <div class="swiper-wrapper">
+        <div class="swiper-wrapper">
 
-        <div class="swiper-slide">
-          <img src="{{ url_for('static', filename='img/slide1.jpg') }}" alt="slide 1">
+            <div class="swiper-slide">
+                <img src="https://i.postimg.cc/fyPW0Ftb/vitalfitness.jpg" alt="Vital Fitness">
+                <div class="hero-overlay">
+                    <div class="hero-content">
+                        <h1>Food, Fitness & Lifestyle</h1>
+                        <p>Experience the best of Ilorin under one roof</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-slide">
+                <img src="https://i.postimg.cc/1XdRNTnt/cavelux.jpg" alt="CaveLux">
+                <div class="hero-overlay">
+                    <div class="hero-content">
+                        <h1>Quality You Can Trust</h1>
+                        <p>Serving Ilorin with excellence since day one</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-slide">
+                <img src="https://i.postimg.cc/L5W4Z7Y8/5050foods.jpg" alt="50-50 Foods">
+                <div class="hero-overlay">
+                    <div class="hero-content">
+                        <h1>Forever Delicious Like The First Time</h1>
+                        <p>Bread, Pastries, Desserts & Full Restaurant Experience</p>
+                    </div>
+                </div>
+            </div>
+
         </div>
 
-        <div class="swiper-slide">
-          <img src="{{ url_for('static', filename='img/slide2.jpg') }}" alt="slide 2">
-        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
 
-        <div class="swiper-slide">
-          <img src="{{ url_for('static', filename='img/slide3.jpg') }}" alt="slide 3">
-        </div>
-
-      </div>
-      <div class="swiper-pagination"></div>
-      <div class="swiper-button-next"></div>
-      <div class="swiper-button-prev"></div>
     </div>
-  </section>
-  <!-- End slideshow -->
+</section>
+<!-- End Slideshow -->
 
-  <!-- Article -->
-  <section id="about-intro" class="py-5">
+<!-- Single CTA below slider -->
+<div class="text-center my-3">
+    <a href="{{ url_for('about') }}" class="btn-getstarted">Explore Fortunate Hub</a>
+</div>
+
+<!-- Article -->
+<section id="about-intro" class="py-5">
     <div class="container">
-      <div class="row align-items-center">
-        <div class="col-lg-12 text-center" data-aos="fade-up">
-          <h2>Welcome to Fortunate Hub</h2>
-          <p>Fortunate Hub is a group of companies committed to excellence across fitnes, food, and lifestyle. We are home to VitalFitness, 50-50 Foods & Bakery, and CaveLux - each delivering quality and experience in their own unique way.</p>
-          <a href="{{ url_for('about') }}" class="btn-getstarted mt-3">Get Started</a>
+        <div class="row align-items-center">
+            <div class="col-lg-12 text-center" data-aos="fade-up">
+                <h2>Welcome to Fortunate Hub</h2>
+                <p>Fortunate Hub is a group of companies committed to excellence across fitness, food, and lifestyle. We are home to VitalFitness, 50-50 Foods & Bakery, and CaveLux — each delivering quality and experience in their own unique way.</p>
+                <a href="{{ url_for('services') }}" class="btn-getstarted mt-3">Our Services</a>
+            </div>
         </div>
-      </div>
     </div>
-  </section>
+</section>
 
-  {% endblock %}
+{% endblock %}
