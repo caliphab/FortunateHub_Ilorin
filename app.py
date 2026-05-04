@@ -17,7 +17,7 @@ article = {
     "section 5": 'The people of Ilorin and many others have accepted us and our brand with open arms',
     "section 6": 'Fortunate Hub Taiwo Isale is one of its kind and it is one destination with many choices.'
 }
-about = """
+about_content = """
 Fortunate Hub Ilorin
 
 Fortunate Hub Ilorin is more than just a place to eat — it is a vibrant lifestyle destination designed to bring comfort, flavor, and unforgettable experiences together in one space. 

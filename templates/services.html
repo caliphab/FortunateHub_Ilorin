@@ -1,0 +1,115 @@
+{% extends "base.html" %}
+
+{% block title %}Fortunate Hub | Services{% endblock %}
+
+{% block main %}
+
+<!-- HERO -->
+<section class="services-hero">
+    <div class="hero-bg"></div>
+    <div class="hero-lines"></div>
+    <div class="s-hero-content" data-aos="fade-up">
+        <p class="hero-eyebrow">Fortunate Hub &nbsp;·&nbsp; Ilorin, Nigeria</p>
+        <h1 class="hero-title">Our<br><em>Services</em></h1>
+        <div class="hero-accent-bar"></div>
+        <p class="hero-sub">Where quality meets Nigerian excellence</p>
+    </div>
+    <div class="hero-scroll">
+        <span>Explore</span>
+        <div class="scroll-line"></div>
+    </div>
+</section>
+<!-- END HERO -->
+
+<!-- CARDS -->
+<section class="services-section">
+    <div class="section-label">
+        <span class="eyebrow">What we offer</span>
+        <h2>Crafted for the <span>extraordinary</span></h2>
+        <div class="section-divider"></div>
+    </div>
+
+    <div class="cards-grid">
+
+        <!-- VitalFitness -->
+        <div class="s-card card--fitness" data-aos="fade-up" data-aos-delay="100">
+            <div class="card-image">
+                <div class="card-image-bg"></div>
+                <div class="card-glass-overlay">
+                    <div class="card-title-overlay">
+                        <small>Health & Wellness</small>
+                        VitalFitness
+                    </div>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="card-meta">
+                    <span class="tag">Gym</span>
+                    <span class="tag">Fitness</span>
+                    <span class="tag">Wellness</span>
+                </div>
+                <p class="card-desc">A modern gym experience designed to push your limits and transform your body with premium equipment and certified coaches.</p>
+                <a href="{{ url_for('fitness') }}" class="card-cta">Register Now</a>
+            </div>
+        </div>
+
+        <!-- 50-50 Foods -->
+        <div class="s-card card--food" data-aos="fade-up" data-aos-delay="200">
+            <div class="card-image">
+                <div class="card-image-bg"></div>
+                <div class="card-glass-overlay">
+                    <div class="card-title-overlay">
+                        <small>Dining & Cuisine</small>
+                        50-50 Foods
+                    </div>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="card-meta">
+                    <span class="tag">Restaurant</span>
+                    <span class="tag">Bakery</span>
+                    <span class="tag">Pastries</span>
+                </div>
+                <p class="card-desc">From slow-baked breads to full restaurant dining — forever delicious like the first time.</p>
+                <a href="{{ url_for('foods') }}" class="card-cta">Explore Menu</a>
+            </div>
+        </div>
+
+        <!-- CaveLux -->
+        <div class="s-card card--cavelux" data-aos="fade-up" data-aos-delay="300">
+            <div class="card-image">
+                <div class="card-image-bg"></div>
+                <div class="card-glass-overlay">
+                    <div class="card-title-overlay">
+                        <small>Luxury Lifestyle</small>
+                        CaveLux
+                    </div>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="card-meta">
+                    <span class="tag">Lounge</span>
+                    <span class="tag">Lifestyle</span>
+                    <span class="tag">Events</span>
+                </div>
+                <p class="card-desc">A premium lounge and lifestyle experience for those who appreciate the finer things in Ilorin.</p>
+                <a href="{{ url_for('cavelux') }}" class="card-cta">Book Experience</a>
+            </div>
+        </div>
+
+    </div>
+</section>
+<!-- END CARDS -->
+
+<!-- CTA STRIP -->
+<div class="featured-strip" data-aos="fade-up">
+    <div class="strip-inner">
+        <p class="strip-eyebrow">Fortunate Hub &nbsp;·&nbsp; Ilorin</p>
+        <h2 class="strip-title">One destination.<br><em>Three worlds.</em></h2>
+        <p class="strip-sub">Food. Fitness. Lifestyle. All under one roof.</p>
+        <a href="{{ url_for('index') }}" class="strip-cta">Get Started</a>
+    </div>
+</div>
+<!-- END CTA STRIP -->
+
+{% endblock %}
