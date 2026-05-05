@@ -1,0 +1,147 @@
+{% extends "base.html" %}
+
+{% block title %}50-50 Foods & Bakery | Fortunate Hub{% endblock %}
+
+{% block main %}
+
+<!-- HERO -->
+<section class="foods-hero" id="foods-hero">
+
+    <div class="hero-panel hero-panel--left">
+        <div class="hero-panel__img" style="background-image: url('https://i.postimg.cc/xT9ZckTn/Amala.jpg');"></div>
+        <div class="hero-panel__overlay"></div>
+    </div>
+
+    <div class="hero-panel hero-panel--right">
+        <div class="hero-panel__img" style="background-image: url('https://i.postimg.cc/Xq1YGR5D/clean-image.png');"></div>
+        <div class="hero-panel__overlay"></div>
+    </div>
+
+    <div class="hero-slash" aria-hidden="true">
+        <svg viewBox="0 0 100 100" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+            <line x1="38" y1="0" x2="62" y2="100" stroke="#c9a84c" stroke-width="0.35" vector-effect="non-scaling-stroke"/>
+            <line x1="39.4" y1="0" x2="63.4" y2="100" stroke="rgba(255,255,255,0.18)" stroke-width="0.18" vector-effect="non-scaling-stroke"/>
+        </svg>
+    </div>
+
+    <div class="foods-hero-content">
+        <span class="hero-eyebrow">50-50 Foods &amp; Bakery</span>
+        <h1 class="foods-hero-title">
+            <span class="hero-title__line">Forever</span>
+            <span class="hero-title__line hero-title__line--accent">Delicious</span>
+        </h1>
+        <p class="hero-sub">Bread.&nbsp; Pastries.&nbsp; Desserts.&nbsp; Meals.</p>
+        <a href="#categories" class="hero-cta">
+            <span>Explore Menu</span>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </a>
+    </div>
+
+    <div class="hero-scroll" aria-hidden="true">
+        <span class="hero-scroll__label">Scroll</span>
+        <span class="hero-scroll__line"></span>
+    </div>
+
+</section>
+<!-- END HERO -->
+
+<!-- BENTO CATEGORIES -->
+<section class="bento-section" id="categories">
+
+    <div class="bento-header">
+        <div class="bento-header__left">
+            <span class="section-eyebrow">What We Offer</span>
+            <h2 class="section-title">Our <em>Signature</em><br>Categories</h2>
+        </div>
+        <p class="bento-header__desc">
+            From oven-fresh loaves to hearty Nigerian meals — every item crafted with care, served with pride.
+        </p>
+    </div>
+
+    <div class="bento-grid">
+
+        <!-- Meals -->
+        <article class="bento-card bento-card--hero" data-aos="fade-up" data-aos-delay="100">
+            <img src="https://images.unsplash.com/photo-1604329760661-e71dc83f8f26?w=900&q=85&auto=format&fit=crop" alt="Nigerian Meals" class="bento-card__img" loading="lazy">
+            <div class="bento-card__overlay"></div>
+            <div class="bento-card__body">
+                <span class="bento-card__number">01</span>
+                <div class="bento-card__text">
+                    <span class="bento-card__cat">Meals</span>
+                    <h3 class="bento-card__name">Hearty Nigerian Meals</h3>
+                    <p class="bento-card__desc">Amala, jollof rice, egusi, pepper soup — authentic comfort food done the proper way.</p>
+                    <a href="#" class="bento-card__btn">
+                        <span>Explore Meals</span>
+                        <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </a>
+                </div>
+            </div>
+            <div class="bento-card__accent-bar"></div>
+        </article>
+
+        <!-- Breads -->
+        <article class="bento-card bento-card--tall" data-aos="fade-up" data-aos-delay="200">
+            <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?w=600&q=85&auto=format&fit=crop" alt="Artisan Breads" class="bento-card__img" loading="lazy">
+            <div class="bento-card__overlay"></div>
+            <div class="bento-card__body">
+                <span class="bento-card__number">02</span>
+                <div class="bento-card__text">
+                    <span class="bento-card__cat">Breads</span>
+                    <h3 class="bento-card__name">Artisan &amp; Everyday Loaves</h3>
+                    <p class="bento-card__desc">Baked fresh every morning. Classic whites, seeded loaves, and more.</p>
+                    <a href="#" class="bento-card__btn">
+                        <span>Shop Breads</span>
+                        <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </a>
+                </div>
+            </div>
+            <div class="bento-card__accent-bar"></div>
+        </article>
+
+        <!-- Pastries -->
+        <article class="bento-card bento-card--wide" data-aos="fade-up" data-aos-delay="300">
+            <img src="https://images.unsplash.com/photo-1517433670267-08bbd4be890f?w=800&q=85&auto=format&fit=crop" alt="Pastries" class="bento-card__img" loading="lazy">
+            <div class="bento-card__overlay"></div>
+            <div class="bento-card__body bento-card__body--row">
+                <span class="bento-card__number">03</span>
+                <div class="bento-card__text">
+                    <span class="bento-card__cat">Pastries</span>
+                    <h3 class="bento-card__name">Flaky Pies &amp; Golden Buns</h3>
+                    <p class="bento-card__desc">Meat pies, sausage rolls, puff-puff, chin-chin — gone by noon.</p>
+                </div>
+                <a href="#" class="bento-card__btn bento-card__btn--outline">
+                    <span>View All</span>
+                    <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </a>
+            </div>
+            <span class="bento-card__tag">Fan Favourite</span>
+            <div class="bento-card__accent-bar"></div>
+        </article>
+
+        <!-- Desserts -->
+        <article class="bento-card bento-card--square" data-aos="fade-up" data-aos-delay="400">
+            <img src="https://images.unsplash.com/photo-1551024601-bec78aea704b?w=600&q=85&auto=format&fit=crop" alt="Desserts" class="bento-card__img" loading="lazy">
+            <div class="bento-card__overlay"></div>
+            <div class="bento-card__body">
+                <span class="bento-card__number">04</span>
+                <div class="bento-card__text">
+                    <span class="bento-card__cat">Desserts</span>
+                    <h3 class="bento-card__name">Cakes, Tarts &amp; Treats</h3>
+                    <p class="bento-card__desc">Custom cakes and chilled desserts for every occasion.</p>
+                    <a href="#" class="bento-card__btn">
+                        <span>Order Now</span>
+                        <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </a>
+                </div>
+            </div>
+            <div class="bento-card__accent-bar"></div>
+        </article>
+
+    </div>
+
+</section>
+<!-- END BENTO -->
+
+{% endblock %}
