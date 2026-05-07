@@ -1,97 +1,130 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fortunate Hub</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fortunate Hub</title>
 
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
-  <!-- Bootstrap Icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
-    
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    />
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
     <!-- AOS Animation CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
+    />
 
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;900&family=Bodoni+Moda:wght@400;700&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;900&family=Bodoni+Moda:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
     <!-- Your Custom CSS -->
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-    
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&family=Montserrat:wght@300;400;500;600&family=Bodoni+Moda:wght@400;700&display=swap" rel="stylesheet">
-</head>
-<body class="{% block body_class %}{% endblock %}">
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
 
-  <!-- Header -->
-  <header id="header">
-    <nav class="navbar navbar-expand-lg fixed-top">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&family=Montserrat:wght@300;400;500;600&family=Bodoni+Moda:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="{% block body_class %}{% endblock %}">
+    <!-- Header -->
+    <header id="header">
+      <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+          <!-- Logo -->
+          <a class="navbar-brand" href="{{ url_for('index') }}">
+            <img
+              src="https://i.postimg.cc/wjKM3k2C/fortunatehub-ilorin-logo3.jpg"
+              alt="Logo"
+              class="img"
+            />
+            <span class="brand-text">
+              <span class="brand-fortunate">FORTUNATE</span>
+              <span class="brand-hub">HUB</span>
+            </span>
+            <span class="brand-diamond">&#9670;</span>
+          </a>
+
+          <!-- Toggle -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-expanded="false"
+          >
+            <span></span>
+          </button>
+
+          <!-- nav links -->
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('services') }}"
+                  >Services</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('about') }}">About Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#signin" id="openSignin">Sign In</a>
+              </li>
+            </ul>
+            <a href="#signin" class="btn-getstarted ms-3">Get Started</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- end header -->
+
+    <!-- main -->
+    <main id="main">{% block main %}{% endblock %}</main>
+    <!-- End Main -->
+
+    <!-- footer -->
+    <footer id="footer">
       <div class="container">
-
-        <!-- Logo -->
-        <a class="navbar-brand" href="{{ url_for('index') }}">
-          <img src="https://i.postimg.cc/wjKM3k2C/fortunatehub-ilorin-logo3.jpg" alt="Logo" class="img">
-          <span class="brand-text">
-        <span class="brand-fortunate">FORTUNATE</span>
-        <span class="brand-hub">HUB</span>
-        </span>
-        <span class="brand-diamond">&#9670;</span>
-        </a>
-
-        <!-- Toggle -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-expanded="false">
-        <span></span>
-        </button>
-
-        <!-- nav links -->
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="{{ url_for('services') }}">Services</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{{ url_for('about') }}">About Us</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Sign In</a>
-            </li>
-          </ul>
-          <a href="#" class="btn-getstarted ms-3">Get Started</a>
+        <div class="row">
+          <div class="col-md-6">
+            <h5>Address</h5>
+            <p>
+              Ibrahim Taiwo Rd, Beside Firstbank, Isale, Illorin 240211, Kwara.
+            </p>
+          </div>
+          <div class="col-md-6">
+            <h5>Contact</h5>
+            <p>Phone: +2347079134149, 07070646407</p>
+            <p>Email: Fortunatebread@gmail.com</p>
+          </div>
         </div>
 
+        <div class="footer-bar">
+          <p>
+            &copy; 2026 <span>Fortunate Hub</span> &nbsp;·&nbsp; All rights
+            reserved &nbsp;·&nbsp; Kwara, Nigeria
+          </p>
+        </div>
       </div>
-    </nav>
-  </header>
-  <!-- end header -->
-  
-  <!-- main -->
-  <main id="main">
-    {% block main %}{% endblock %}
-  </main>
-  <!-- End Main -->
+    </footer>
+    <!-- footer end -->
 
-  <!-- footer -->
-  <footer id="footer">
-    <div class="container">
-    <div class="row">
-      <div class="col-md-6">
-        <h5>Address</h5>
-        <p>Ibrahim Taiwo Rd, Beside Firstbank, Isale, Illorin 240211, Kwara.</p>
-      </div>
-      <div class="col-md-6">
-        <h5>Contact</h5>
-        <p>Phone: +2347079134149, 07070646407</p>
-        <p>Email: Fortunatebread@gmail.com</p>
-      </div>
-    </div>
-
-    <div class="footer-bar">
-  <p>&copy; 2026 <span>Fortunate Hub</span> &nbsp;·&nbsp; All rights reserved &nbsp;·&nbsp; Kwara, Nigeria</p>
-</div>
-    </div>
-  </footer>
-  <!-- footer end -->
-
-  <!-- Bootstrap JS -->
+    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
     <!-- AOS Animation JS -->
@@ -105,5 +138,206 @@
 
     {% block scripts %}{% endblock %}
 
-</body>
+    <!-- ── AUTH MODALS ── -->
+<div class="auth-overlay" id="authOverlay">
+
+  <div class="auth-modal">
+
+    <!-- ══════════════════════════════════
+         LEFT — Decorative Brand Panel
+    ══════════════════════════════════ -->
+    <div class="auth-panel">
+
+      <!-- Diagonal gold line grid -->
+      <div class="auth-panel__lines" aria-hidden="true">
+        <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+          <!-- diagonal lines -->
+          <line x1="-10%" y1="0"   x2="60%"  y2="110%" stroke="#c9a84c" stroke-width="0.6" opacity="0.18"/>
+          <line x1="10%"  y1="0"   x2="80%"  y2="110%" stroke="#c9a84c" stroke-width="0.6" opacity="0.12"/>
+          <line x1="30%"  y1="0"   x2="100%" y2="110%" stroke="#c9a84c" stroke-width="0.6" opacity="0.18"/>
+          <line x1="50%"  y1="0"   x2="120%" y2="110%" stroke="#c9a84c" stroke-width="0.4" opacity="0.1"/>
+          <line x1="-30%" y1="0"   x2="40%"  y2="110%" stroke="#c9a84c" stroke-width="0.4" opacity="0.1"/>
+          <!-- horizontal cross-lines for grid effect -->
+          <line x1="0" y1="25%"  x2="100%" y2="25%"  stroke="#c9a84c" stroke-width="0.4" opacity="0.07"/>
+          <line x1="0" y1="50%"  x2="100%" y2="50%"  stroke="#c9a84c" stroke-width="0.4" opacity="0.07"/>
+          <line x1="0" y1="75%"  x2="100%" y2="75%"  stroke="#c9a84c" stroke-width="0.4" opacity="0.07"/>
+          <!-- corner ornament top-left -->
+          <rect x="16" y="16" width="32" height="32" fill="none" stroke="#c9a84c" stroke-width="0.8" opacity="0.4"/>
+          <rect x="20" y="20" width="24" height="24" fill="none" stroke="#c9a84c" stroke-width="0.4" opacity="0.25"/>
+          <!-- corner ornament bottom-right -->
+          <rect x="calc(100% - 48px)" y="calc(100% - 48px)" width="32" height="32" fill="none" stroke="#c9a84c" stroke-width="0.8" opacity="0.4"/>
+        </svg>
+      </div>
+
+      <!-- Gold dot accent -->
+      <div class="auth-panel__dot" aria-hidden="true"></div>
+
+      <!-- Brand content -->
+      <div class="auth-panel__content">
+        <div class="auth-panel__logo">
+          <span class="auth-panel__logo-mark">F</span>
+        </div>
+        <h2 class="auth-panel__brand">Fortunate<br/>Hub</h2>
+        <div class="auth-panel__divider"></div>
+        <p class="auth-panel__tagline">Where luxury meets<br/>Nigerian lifestyle.</p>
+        <ul class="auth-panel__perks">
+          <li><span class="perk-dot"></span>Exclusive member deals</li>
+          <li><span class="perk-dot"></span>Curated lifestyle picks</li>
+          <li><span class="perk-dot"></span>Priority access &amp; drops</li>
+        </ul>
+      </div>
+
+      <!-- Bottom watermark -->
+      <span class="auth-panel__watermark">Fortunate Hub © 2025</span>
+    </div>
+
+    <!-- ══════════════════════════════════
+      RIGHT — Form Area
+    ══════════════════════════════════ -->
+    <div class="auth-form-area">
+
+      <!-- Close button -->
+      <button class="auth-close" id="authClose" aria-label="Close modal">
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+          <path d="M2 2l14 14M16 2L2 16" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+        </svg>
+      </button>
+
+      <!-- ── STATE 1: Sign In ── -->
+      <div class="auth-state" id="stateSignIn" data-state="signin">
+        <div class="auth-form-header">
+          <span class="auth-form-eyebrow">Welcome back</span>
+          <h3 class="auth-form-title">Sign In</h3>
+          <p class="auth-form-sub">Access your Fortunate Hub account</p>
+        </div>
+
+        <form class="auth-form" onsubmit="return false;">
+          <div class="field-group">
+            <label class="field-label" for="si-email">Email Address</label>
+            <div class="field-wrap">
+              <svg class="field-icon" width="16" height="16" viewBox="0 0 16 16" fill="none"><rect x="1" y="3" width="14" height="10" rx="2" stroke="currentColor" stroke-width="1.3"/><path d="M1 5l7 5 7-5" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/></svg>
+              <input class="field-input" id="si-email" type="email" placeholder="you@example.com" autocomplete="email"/>
+            </div>
+          </div>
+
+          <div class="field-group">
+            <label class="field-label" for="si-password">Password</label>
+            <div class="field-wrap">
+              <svg class="field-icon" width="16" height="16" viewBox="0 0 16 16" fill="none"><rect x="2" y="7" width="12" height="8" rx="1.5" stroke="currentColor" stroke-width="1.3"/><path d="M5 7V5a3 3 0 016 0v2" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>
+              <input class="field-input" id="si-password" type="password" placeholder="••••••••" autocomplete="current-password"/>
+              <button type="button" class="field-eye" aria-label="Toggle password" onclick="togglePwd(this)">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><ellipse cx="8" cy="8" rx="7" ry="4.5" stroke="currentColor" stroke-width="1.3"/><circle cx="8" cy="8" r="2" stroke="currentColor" stroke-width="1.3"/></svg>
+              </button>
+            </div>
+            <a href="#" class="field-forgot">Forgot password?</a>
+          </div>
+
+          <button type="submit" class="auth-submit">
+            <span>Sign In</span>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+        </form>
+
+        <p class="auth-switch">
+          Don't have an account?
+          <button class="auth-switch-btn" onclick="switchState('signup')">Create one</button>
+        </p>
+      </div>
+
+      <!-- ── STATE 2: Sign Up ── -->
+      <div class="auth-state auth-state--hidden" id="stateSignUp" data-state="signup">
+        <div class="auth-form-header">
+          <span class="auth-form-eyebrow">New here?</span>
+          <h3 class="auth-form-title">Create Account</h3>
+          <p class="auth-form-sub">Join Fortunate Hub today</p>
+        </div>
+
+        <form class="auth-form" onsubmit="return false;">
+          <div class="field-group">
+            <label class="field-label" for="su-name">Full Name</label>
+            <div class="field-wrap">
+              <svg class="field-icon" width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="5" r="3" stroke="currentColor" stroke-width="1.3"/><path d="M2 14c0-3.314 2.686-5 6-5s6 1.686 6 5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>
+              <input class="field-input" id="su-name" type="text" placeholder="Chukwuemeka Obi" autocomplete="name"/>
+            </div>
+          </div>
+
+          <div class="field-group">
+            <label class="field-label" for="su-email">Email Address</label>
+            <div class="field-wrap">
+              <svg class="field-icon" width="16" height="16" viewBox="0 0 16 16" fill="none"><rect x="1" y="3" width="14" height="10" rx="2" stroke="currentColor" stroke-width="1.3"/><path d="M1 5l7 5 7-5" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/></svg>
+              <input class="field-input" id="su-email" type="email" placeholder="you@example.com" autocomplete="email"/>
+            </div>
+          </div>
+
+          <div class="field-row">
+            <div class="field-group">
+              <label class="field-label" for="su-pass">Password</label>
+              <div class="field-wrap">
+                <svg class="field-icon" width="16" height="16" viewBox="0 0 16 16" fill="none"><rect x="2" y="7" width="12" height="8" rx="1.5" stroke="currentColor" stroke-width="1.3"/><path d="M5 7V5a3 3 0 016 0v2" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>
+                <input class="field-input" id="su-pass" type="password" placeholder="••••••••" autocomplete="new-password"/>
+              </div>
+            </div>
+            <div class="field-group">
+              <label class="field-label" for="su-confirm">Confirm</label>
+              <div class="field-wrap">
+                <svg class="field-icon" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <input class="field-input" id="su-confirm" type="password" placeholder="••••••••" autocomplete="new-password"/>
+              </div>
+            </div>
+          </div>
+
+          <button type="submit" class="auth-submit" onclick="switchState('otp')">
+            <span>Create Account</span>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+        </form>
+
+        <p class="auth-switch">
+          Already have an account?
+          <button class="auth-switch-btn" onclick="switchState('signin')">Sign in</button>
+        </p>
+      </div>
+
+      <!-- ── STATE 3: OTP Verification ── -->
+      <div class="auth-state auth-state--hidden" id="stateOtp" data-state="otp">
+        <div class="auth-form-header">
+          <span class="auth-form-eyebrow">Verification</span>
+          <h3 class="auth-form-title">Enter OTP</h3>
+          <p class="auth-form-sub">We sent a 6-digit code to your email</p>
+        </div>
+
+        <form class="auth-form" onsubmit="return false;">
+          <div class="otp-wrap">
+            <div class="otp-boxes">
+              <input class="otp-box" type="text" inputmode="numeric" maxlength="1" pattern="[0-9]" aria-label="Digit 1"/>
+              <input class="otp-box" type="text" inputmode="numeric" maxlength="1" pattern="[0-9]" aria-label="Digit 2"/>
+              <input class="otp-box" type="text" inputmode="numeric" maxlength="1" pattern="[0-9]" aria-label="Digit 3"/>
+              <span class="otp-sep">—</span>
+              <input class="otp-box" type="text" inputmode="numeric" maxlength="1" pattern="[0-9]" aria-label="Digit 4"/>
+              <input class="otp-box" type="text" inputmode="numeric" maxlength="1" pattern="[0-9]" aria-label="Digit 5"/>
+              <input class="otp-box" type="text" inputmode="numeric" maxlength="1" pattern="[0-9]" aria-label="Digit 6"/>
+            </div>
+            <p class="otp-hint">Code expires in <span class="otp-timer" id="otpTimer">04:59</span></p>
+          </div>
+
+          <button type="submit" class="auth-submit">
+            <span>Verify &amp; Continue</span>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+        </form>
+
+        <p class="auth-switch">
+          Didn't receive a code?
+          <button class="auth-switch-btn" id="resendBtn">Resend</button>
+        </p>
+        <p class="auth-switch" style="margin-top:0.5rem;">
+          <button class="auth-switch-btn" onclick="switchState('signup')" style="opacity:0.5; font-size:0.7rem;">← Back to Sign Up</button>
+        </p>
+      </div>
+
+    </div><!-- /auth-form-area -->
+  </div><!-- /auth-modal -->
+</div><!-- /auth-overlay -->
+    <!-- END AUTH MODALS -->
+  </body>
 </html>
